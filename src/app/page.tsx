@@ -223,7 +223,7 @@ export default function Home() {
         <header className="rounded-3xl border border-slate-200 bg-white/90 p-10 text-center shadow-2xl shadow-slate-200">
           <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-full border border-slate-200 bg-slate-50 shadow-lg shadow-slate-200">
             <Image
-              src="/foto-perfil.jpg"
+              src="/foto-perfil.webp"
               alt="Fotografía de Alexis Rodríguez"
               width={180}
               height={180}
