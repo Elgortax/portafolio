@@ -228,6 +228,7 @@ export default function Home() {
               width={180}
               height={180}
               className="h-36 w-36 rounded-full object-cover"
+              style={{ objectPosition: "center 40%" }}
               priority
             />
           </div>
