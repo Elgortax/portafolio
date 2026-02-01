@@ -207,19 +207,14 @@ export default function Home() {
 
   const showPreviousImage = () => {
     if (!activeProject?.gallery?.length) return;
-    setActiveSlide(
-      (prev) =>
-        (prev - 1 + activeProject.gallery.length) %
-        activeProject.gallery.length,
-    );
+    const totalSlides = activeProject.gallery.length;
+    setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
   const showNextImage = () => {
     if (!activeProject?.gallery?.length) return;
-    setActiveSlide(
-      (prev) =>
-        (prev + 1) % activeProject.gallery.length,
-    );
+    const totalSlides = activeProject.gallery.length;
+    setActiveSlide((prev) => (prev + 1) % totalSlides);
   };
 
   return (
