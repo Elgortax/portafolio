@@ -1,0 +1,11 @@
+﻿<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#grad)" rx="40" />
+  <text x="50%" y="45%" text-anchor="middle" fill="#e2e8f0" font-size="72" font-family="'Segoe UI', sans-serif" font-weight="600">PolyCrochet</text>
+  <text x="50%" y="58%" text-anchor="middle" fill="#cbd5f5" font-size="32" font-family="'Segoe UI', sans-serif">Plataforma Web para Emprendimiento</text>
+</svg>
