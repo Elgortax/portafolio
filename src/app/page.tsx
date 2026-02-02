@@ -67,6 +67,49 @@ const skillTags = [
 
 const projects: ProjectInfo[] = [
   {
+    id: "bicicletas-duoc",
+    title: "Bicicletas DUOC",
+    timeframe: "2024",
+    summary:
+      "Reserva y administra estacionamientos de bicicletas DUOC con un flujo moderno y validaciones en vivo.",
+    description: [
+      "Aplicación full-stack reescrita desde un formulario legacy en PHP para digitalizar el registro de bicicletas en el campus. Integra autenticación con sesiones JWT, panel privado para visualizar y liberar cupos, y validaciones en tiempo real en los formularios.",
+      "Backend y frontend conviven en Next.js App Router, con Prisma como ORM y libSQL/Turso como base gestionada; todo desplegado en Vercel listo para portafolio.",
+    ],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Prisma",
+      "libSQL / Turso",
+      "Tailwind CSS",
+    ],
+    image: {
+      src: "/bicicletas-duoc/logo.png",
+      alt: "Logo y mockup de Bicicletas DUOC",
+    },
+    linkHref: "https://bicicleteroduoc.vercel.app/",
+    linkLabel: "bicicleteroduoc.vercel.app",
+    gallery: [
+      {
+        src: "/bicicletas-duoc/screen-1.png",
+        alt: "Formulario principal para registrar bicicletas DUOC",
+      },
+      {
+        src: "/bicicletas-duoc/screen-2.png",
+        alt: "Pantalla de listado con validaciones en vivo",
+      },
+      {
+        src: "/bicicletas-duoc/screen-3.png",
+        alt: "Detalle de usuario y bicicleta registrada",
+      },
+      {
+        src: "/bicicletas-duoc/screen-4.png",
+        alt: "Panel privado para liberar cupos de estacionamiento",
+      },
+    ],
+  },
+  {
     id: "polycrochet",
     title: "PolyCrochet – Plataforma Web para Emprendimiento",
     timeframe: "2025",

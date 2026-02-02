@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Portafolio de Alexis Rodríguez
 
-## Getting Started
+Sitio personal desarrollado con Next.js 16 (App Router) y Tailwind CSS para mostrar mi perfil profesional, proyectos recientes y formas de contacto. El contenido está totalmente en español y cada sección está pensada para reclutadores TI.
 
-First, run the development server:
+## Estructura principal
+- **Hero**: foto, rol, CTA hacia LinkedIn, GitHub y descarga del CV.
+- **Sobre mí / Skills**: resumen profesional y chips con competencias técnicas.
+- **Proyectos**: tarjetas con imagen destacada y modal con carrusel de capturas, stack y enlaces.
+- **Certificaciones**: listado con botón de descarga del PDF.
+- **Contacto**: canales directos (email, LinkedIn y GitHub).
 
+## Requisitos
+- Node.js 20+
+- npm (incluido con Node)
+
+## Scripts disponibles
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install      # instala dependencias
+npm run dev      # entorno local en http://localhost:3000
+npm run lint     # ejecuta ESLint
+npm run build    # compila para producción
+npm run start    # sirve la build de producción
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cómo agregar un nuevo proyecto
+1. Coloca el logo y capturas dentro de `public/<nombre-proyecto>/`.
+2. Edita `src/app/page.tsx` y añade un objeto al arreglo `projects` con:
+   - `id`, `title`, `timeframe`, `summary`, `description` (array de párrafos)
+   - `technologies` (array de badges)
+   - `image` principal y `gallery` opcional
+   - `linkHref` / `linkLabel`
+3. Ejecuta `npm run lint` y haz commit para desplegar en Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+Cada `git push` a la rama `main` dispara un build automático en Vercel. El sitio público vive en **https://alexis-rodriguez.vercel.app**.
