@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import casos from "./casos.json";
 
 const grupos = ["Todos", "Inversión", "Comercial", "Finanzas", "Operaciones"];
-const base = "https://github.com/Elgortax/terreno-ops";
+const base = "https://github.com/Elgortax/aplicaciones-internas";
 const descripciones: Record<string, string> = {
   "gestion-cartera": "Cotización de prueba con la estructura de pago y los vencimientos del pie.",
   "situacion-proyectos": "Vista general de GTX con los proyectos activos, pendientes y próximos hitos.",
