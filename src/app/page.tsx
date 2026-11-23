@@ -282,8 +282,8 @@ export default function Home() {
           <h1 className="mt-4 text-4xl font-bold text-slate-900 sm:text-6xl">
             Alexis Rodríguez
           </h1>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-700">
-            Analista TI en Grupo Tierras de Chile · Ingeniero en Informática
+          <h2 className="mx-auto mt-2 max-w-4xl text-balance text-xl font-semibold text-slate-700 sm:text-2xl">
+            Analista TI en Grupo Tierras de Chile | Creador de aplicaciones internas | Automatización de procesos
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-pretty text-base text-slate-600 sm:text-lg">
             Creo aplicaciones para el negocio inmobiliario, desde la evaluación de un terreno hasta la firma y el seguimiento de una venta. También automatizo procesos y desarrollo herramientas para el trabajo diario de la oficina.
