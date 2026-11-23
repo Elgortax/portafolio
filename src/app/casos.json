@@ -1,184 +1,233 @@
 [
   {
-    "slug": "cierre-comercial",
-    "name": "Cierre Comercial",
-    "group": "Finanzas",
-    "purpose": "Reúne los resultados del mes para que dirección pueda explicar qué se vendió, cuánto costó y con qué caja terminó el período.",
+    "slug": "gestion-cartera",
+    "name": "Gestión de Cartera",
+    "group": "Comercial",
+    "purpose": "Conecta la disponibilidad de cada lote con las visitas, cotizaciones y planes de pago que se preparan para un cliente.",
     "steps": [
-      "Abre Preparar cierre y selecciona el período. Revisa el stock inicial y la meta de ventas.",
-      "Registra ventas, desistimientos, costos, inversión en marketing, saldos de caja y composición de ingresos. Recorre las ocho etapas y guarda el cierre con una nota ejecutiva.",
-      "Vuelve al resumen y al histórico. Compara ventas netas, EBITDA y saldo de caja, o revisa en cuántos meses se agotaría el stock al ritmo actual."
+      "Elige un proyecto y consulta qué lotes están disponibles. Abre la ficha para ver sus antecedentes.",
+      "Revisa una visita y prepara una cotización para el lote. Cambia las condiciones y consulta el plan de pago.",
+      "Cambia de perfil para ver el trabajo desde otra función. Descarga un reporte o exporta un respaldo de tus cambios."
     ],
-    "result": "Un cierre mensual trazable, una comparación con el presupuesto y una proyección simple del inventario.",
-    "scope": "Recorrido reconstruido. Los importes se ingresan localmente. El forecast mantiene constante el ritmo del mes. Los conectores de CRM, marketing y noticias del original quedan fuera de esta edición."
+    "result": "La ficha de venta, el lote y los documentos se pueden consultar en el mismo lugar.",
+    "tags": [
+      "Lotes",
+      "Cotizaciones",
+      "Planes de pago"
+    ],
+    "entry": "index.html",
+    "guide": "COMO_FUNCIONA.html",
+    "requirements": "Navegador de escritorio actual.",
+    "scope": "Cuatro proyectos ficticios, 96 lotes, 68 cotizaciones y 32 planes. Guarda los cambios en el navegador."
+  },
+  {
+    "slug": "situacion-proyectos",
+    "name": "Situación de Proyectos · GTX",
+    "group": "Operaciones",
+    "purpose": "Permite que cada área vea quién lleva una tarea, qué partida presupuestaria la financia y qué falta para terminarla.",
+    "steps": [
+      "Entra como administrador, colaborador o lector y consulta la vista general de los proyectos.",
+      "Abre un área, desglosa una tarea en subítems, registra un avance y adjunta los antecedentes.",
+      "Revisa el presupuesto en pesos chilenos y vuelve a entrar con otro perfil para comprobar los permisos."
+    ],
+    "result": "El equipo puede seguir el avance y el presupuesto desde la misma ficha.",
+    "tags": [
+      "Áreas",
+      "Tareas",
+      "Presupuesto"
+    ],
+    "entry": "INICIAR DEMO.cmd",
+    "guide": "COMO FUNCIONA GTX.html",
+    "requirements": "Windows de 64 bits. El ZIP incluye Node.js.",
+    "scope": "Incluye tres accesos locales precargados, proyectos de ejemplo y documentación."
+  },
+  {
+    "slug": "radar-terrenos",
+    "name": "Nexo Tierra",
+    "group": "Inversión",
+    "purpose": "Acompaña la captación de un terreno desde su primera aparición en el mercado hasta la visita, la evaluación y la decisión comercial.",
+    "steps": [
+      "Filtra el mercado por región, comuna, superficie o precio. Compara los predios y ubícalos en el mapa.",
+      "Entra a Seguimiento, abre una oportunidad y registra antecedentes, una nota o la próxima gestión.",
+      "Revisa la ficha de visita y cambia de perfil para recorrer las etapas de validación de una propuesta."
+    ],
+    "result": "Una oportunidad conserva su evaluación técnica, su seguimiento comercial y su historial.",
+    "tags": [
+      "Mercado",
+      "Seguimiento",
+      "Visita"
+    ],
+    "entry": "ABRIR DEMO.cmd",
+    "guide": "GUIA.html",
+    "requirements": "Windows de 64 bits. El ZIP incluye Node.js.",
+    "scope": "Incluye 32 avisos, cuatro proyectos propios, cuatro remates y cuatro corredoras ficticias. Guarda el trabajo en el equipo. La cartografía necesita internet."
   },
   {
     "slug": "evaluador-proyectos",
     "name": "Evaluador de Proyectos",
     "group": "Inversión",
-    "purpose": "Permite decidir si conviene desarrollar una parcelación y qué supuestos cambian su rentabilidad.",
+    "purpose": "Ayuda a decidir si conviene comprar y desarrollar un predio, cuánto margen dejaría y en qué meses haría falta caja.",
     "steps": [
-      "Abre Mirador de Bruma en Ficha del predio y revisa la superficie, el costo de adquisición, el pie y las cuotas.",
-      "En Lotes y costos, modifica el precio de una etapa en CLP o UF y agrega un costo de habilitación. En Escenarios cambia el precio o la velocidad de venta.",
-      "Compara el margen de los predios y abre Flujo mensual para ver ventas, pies, cuotas y pagos al propietario. Exporta la tabla o imprime la vista."
+      "Abre uno de los cinco proyectos y revisa la compra por hectárea o por el predio completo, en CLP o UF.",
+      "Cambia el precio de venta, el presupuesto de desarrollo o la velocidad de colocación. Compara escenarios.",
+      "Contrasta cobros y pagos del terreno en el flujo mensual y revisa los gráficos e informes de la evaluación."
     ],
-    "result": "Una evaluación financiera por predio que muestra cómo cambian los ingresos, el margen y el calendario de cobro.",
-    "scope": "Recorrido reconstruido con una implementación independiente y cifras ficticias. La UF es editable. El flujo muestra hasta 240 meses. Territorio incluye un índice por región y comuna. El mapa satelital y el análisis remoto pertenecen al sistema original."
-  },
-  {
-    "slug": "proyeccion-ventas",
-    "name": "Proyección de Ventas",
-    "group": "Finanzas",
-    "purpose": "Estima cuándo se convertirá una venta proyectada en efectivo, considerando el pie, las cuotas y las cuentas por cobrar.",
-    "steps": [
-      "Revisa el stock y las condiciones de cada proyecto en Parámetros. Cambia las unidades y precios de un mes futuro.",
-      "Observa la venta proyectada, el pie, el saldo financiado y el calendario de cuotas. Agrega cuentas por cobrar, corretaje u otros ingresos y egresos.",
-      "Contrasta los meses en el dashboard y guarda una vista de lectura local para presentar el escenario."
+    "result": "Se pueden comparar proyectos y ver qué supuesto explica la diferencia en margen o caja.",
+    "tags": [
+      "Compra",
+      "Escenarios",
+      "Flujo mensual"
     ],
-    "result": "Una proyección mensual que distingue el momento de vender del momento de recibir el dinero.",
-    "scope": "Adaptación de las matrices y del motor de cálculo originales. Las vistas compartidas se guardan en el equipo y los ejemplos parten con tres proyectos ficticios."
-  },
-  {
-    "slug": "panel-seguimiento",
-    "name": "Panel de Seguimiento",
-    "group": "Comercial",
-    "purpose": "Ayuda al equipo comercial a detectar en qué etapa se pierden oportunidades antes de terminar el mes.",
-    "steps": [
-      "Selecciona un mes y revisa las metas de leads, contactos, visitas, reservas y promesas.",
-      "Ingresa los resultados del día, revisa el seguimiento por ejecutivo y contrasta los resultados con las metas.",
-      "Registra un compromiso para corregir una desviación y revisa cómo queda reflejada en la lectura del período."
-    ],
-    "result": "Una revisión diaria del embudo, con metas y compromisos que el equipo puede seguir.",
-    "scope": "Adaptación del panel original. Los proyectos, objetivos y responsables son ficticios y la actividad se registra manualmente. La demo no importa conversaciones de respond.io."
-  },
-  {
-    "slug": "control-promociones",
-    "name": "Control de Promociones",
-    "group": "Comercial",
-    "purpose": "Ordena las campañas inmobiliarias y permite entender cuánto cambia el precio y el flujo de cobro bajo una promoción.",
-    "steps": [
-      "Abre una campaña de ejemplo o crea una campaña indicando proyecto, vigencia y responsable.",
-      "Configura precio de lista, descuento, reserva, pie, cuotas y beneficios. Ajusta la UF de simulación si cambias la unidad de precio.",
-      "Revisa el resultado por campaña, la proyección de ingresos y la ficha que recibe el equipo comercial."
-    ],
-    "result": "Un conjunto de condiciones comerciales reproducibles y una estimación del ingreso esperado.",
-    "scope": "Adaptación del gestor y de las fórmulas originales. El tipo de cambio es local y las campañas de inicio son ficticias."
-  },
-  {
-    "slug": "tareas-vicaper",
-    "name": "Tareas Vicaper",
-    "group": "Operaciones",
-    "purpose": "Coordina el trabajo entre áreas para que cada actividad tenga una fecha, un responsable y evidencia de avance.",
-    "steps": [
-      "Abre el proyecto de ejemplo y crea una tarea con área, responsables, prioridad y vencimiento.",
-      "Añade elementos a la lista de verificación, registra una actualización y modifica el porcentaje de avance.",
-      "Consulta el calendario y la gestión mensual para ubicar tareas vencidas, carga por responsable y actividades terminadas."
-    ],
-    "result": "Un historial de ejecución que conserva responsables, plazos y cambios de estado.",
-    "scope": "Adaptación de la aplicación de tareas y su informe mensual. Las personas y equipos son de ejemplo. Los mensajes y cambios se ven en esta copia local. Outlook, correo y adjuntos corporativos requieren el servicio original."
+    "entry": "Iniciar demo.cmd",
+    "guide": "Guía de la demo.html",
+    "requirements": "Windows o un navegador actual con Abrir demo.html.",
+    "scope": "Cinco proyectos ficticios y dos espacios de trabajo locales. El mapa y la actualización de UF usan internet."
   },
   {
     "slug": "evaluador-broker",
     "name": "Evaluador de Proyectos Broker",
     "group": "Inversión",
-    "purpose": "Modela un loteo con un aportante de terreno y permite negociar cómo y cuándo se distribuyen los ingresos del proyecto.",
+    "purpose": "Simula la venta de un loteo para comprobar cuándo se financian las obras y cuánto puede recibir el propietario.",
     "steps": [
-      "Revisa superficie, lotes, precio y calendario comercial. Cambia la unidad entre CLP y UF.",
-      "Elige el esquema de pago al aportante y modifica pie, cuotas, hitos de obras o costos de habilitación.",
-      "Compara los escenarios y la caja mes a mes. Duplica el proyecto para conservar la alternativa de negociación."
+      "Abre Lomas del Canelo y revisa las condiciones de venta por lote, incluido el interés anual de las cuotas.",
+      "Compara los escenarios conservador, base y optimista. Observa cómo cambian la recaudación y los meses de venta.",
+      "En el flujo de caja mensual, cruza cobros, costo de obras y pagos al propietario."
     ],
-    "result": "Un escenario de negocio que relaciona precio de venta, velocidad de colocación, obras y pagos al aportante.",
-    "scope": "Adaptación de la calculadora original con un predio, precios, costos e hitos ficticios. Los cambios y respaldos permanecen en la copia local."
+    "result": "Se identifican meses con déficit y el efecto de cambiar tasa, precios o calendario de obras.",
+    "tags": [
+      "Cuotas",
+      "Obras",
+      "Propietario"
+    ],
+    "entry": "Abrir demo.html",
+    "guide": "Guía de la demo.html",
+    "requirements": "Navegador de escritorio actual.",
+    "scope": "Incluye un loteo ficticio. Conserva el archivo HTML junto a la carpeta archivos."
   },
   {
-    "slug": "gantt-proyectos",
-    "name": "Gantt Proyectos",
-    "group": "Operaciones",
-    "purpose": "Muestra la secuencia de una obra y permite saber qué actividad o hito explica su avance.",
-    "steps": [
-      "Abre Mirador de Bruma o crea un proyecto con su ubicación. Agrupa las actividades por concepto.",
-      "Modifica las fechas, el estado y el porcentaje de avance. Marca un hito y añade una observación a la obra.",
-      "Cambia la escala del calendario y revisa el informe del proyecto antes de imprimirlo."
-    ],
-    "result": "Una carta Gantt y un avance consolidado que reflejan las fechas y el estado de las actividades.",
-    "scope": "Adaptación de la carta Gantt original. Dos obras ficticias reemplazan los datos de despliegue. Las observaciones y las tareas se guardan en el navegador."
-  },
-  {
-    "slug": "radar-terrenos",
-    "name": "Radar de Terrenos",
-    "group": "Inversión",
-    "purpose": "Ayuda a seleccionar predios para una evaluación más profunda comparando precio, superficie, acceso y antecedentes técnicos.",
-    "steps": [
-      "Filtra el mercado por región o estado de revisión. Selecciona hasta cuatro predios para comparar su precio por hectárea.",
-      "Actualiza la ficha técnica con derechos de agua, acceso y observaciones. Revisa también los corredores y remates del ejemplo.",
-      "Abre un caso de seguimiento, agenda una visita y registra la decisión en su bitácora."
-    ],
-    "result": "Una lista corta de oportunidades comparables y un historial de las decisiones sobre cada predio.",
-    "scope": "Recorrido reconstruido de Nexo de Tierras. Ofertas, corredores y remates son ficticios. El mapa satelital, la inteligencia geoespacial y la actualización desde portales externos requieren los servicios del original."
-  },
-  {
-    "slug": "gestion-oficina",
-    "name": "Gestión de Oficina",
-    "group": "Operaciones",
-    "purpose": "Permite a TI rastrear qué recursos utiliza cada persona y qué equipos o licencias siguen disponibles.",
-    "steps": [
-      "Busca una persona ficticia y abre su ficha para revisar sus equipos, línea y licencias.",
-      "Crea un recurso o modifica su asignación. Comprueba el cambio desde la vista de personas y también desde el inventario.",
-      "Revisa el avance de una cuenta Microsoft 365 y añade una nota o un documento de prueba a la ficha."
-    ],
-    "result": "Un inventario relacionado por persona, con asignaciones, estado de las cuentas y antecedentes de cada recurso.",
-    "scope": "Adaptación de las fichas y relaciones originales. Los documentos se guardan en este navegador. Los estados de Microsoft 365 sirven para el seguimiento operativo y no crean cuentas externas."
-  },
-  {
-    "slug": "gestion-cartera",
-    "name": "Gestión de Cartera",
+    "slug": "panel-seguimiento",
+    "name": "Panel de Seguimiento Comercial y Marketing",
     "group": "Comercial",
-    "purpose": "Conecta la cotización de un lote con su reserva, los hitos legales y los pagos hasta la escritura.",
+    "purpose": "Reúne metas, reportes del equipo y actividad de marketing para localizar dónde se pierde el avance entre el primer contacto y la firma.",
     "steps": [
-      "Cotiza un lote disponible. Ajusta el descuento, la UF, el pie y el número de cuotas para ver el precio y el saldo financiado.",
-      "Desde Cartera, lleva la operación por reserva, validación y promesa. Comprueba cómo se descuenta el lote del stock disponible.",
-      "Concilia un abono, reprograma una cita y consulta la bitácora. Finaliza con escritura o registra el desistimiento o la resciliación que corresponda."
+      "Selecciona el período y compara los resultados del embudo con las metas del equipo.",
+      "Entra al reporte de una ejecutiva y revisa sus contactos, visitas y reservas por proyecto.",
+      "Cruza las agendas con los datos de captación y consulta las firmas y ventas administrativas."
     ],
-    "result": "Una cartera en la que se puede rastrear el estado comercial del cliente, la disponibilidad del lote y el saldo pendiente.",
-    "scope": "Recorrido reconstruido con conciliación local y una UF de simulación. La validación documental, las devoluciones y aprobaciones financieras externas del sistema corporativo quedan fuera de esta edición."
+    "result": "El panel permite relacionar el gasto en captación con las visitas y los resultados que reporta el equipo.",
+    "tags": [
+      "Marketing",
+      "Visitas",
+      "Firmas"
+    ],
+    "entry": "Abrir demo.cmd",
+    "guide": "Cómo funciona.html",
+    "requirements": "Windows de 64 bits. El ZIP incluye Node.js.",
+    "scope": "Los reportes, contactos, agendas y ventas son ejemplos generados para noviembre de 2026 y los períodos de comparación."
   },
   {
-    "slug": "sala-y-camioneta",
-    "name": "Sala de reuniones y camioneta",
-    "group": "Operaciones",
-    "purpose": "Evita reservas superpuestas de las salas y de la camioneta, con reglas independientes para cada recurso.",
+    "slug": "cierre-comercial",
+    "name": "Cierre Comercial",
+    "group": "Finanzas",
+    "purpose": "Reúne ventas, costos, marketing y caja para preparar el cierre de un mes y explicar sus variaciones frente al directorio.",
     "steps": [
-      "Abre la sala principal o la sala cocina, selecciona un horario futuro y crea una reunión de prueba.",
-      "Intenta repetir el mismo intervalo o reservar la cocina entre las 13:00 y las 16:30. La aplicación explica el conflicto.",
-      "Cambia a la agenda de camioneta, programa retiro y devolución, revisa el destino y luego edita o cancela el viaje."
+      "Selecciona un mes y recorre las etapas del cierre. Revisa ventas, desistimientos, gastos y saldos.",
+      "Consulta el tablero y compara los indicadores comerciales y financieros con el histórico.",
+      "Abre el forecast, cambia un supuesto y revisa cómo afecta el inventario y los informes."
     ],
-    "result": "Dos agendas independientes con disponibilidad validada y reservas editables en horario de Chile.",
-    "scope": "Adaptación de ambas interfaces y de sus validadores originales. Los correos e invitaciones están simulados. Extrae la carpeta completa para navegar entre ambas agendas."
+    "result": "Un cierre mensual con sus indicadores, comparativos e informes de proyección.",
+    "tags": [
+      "Cierre",
+      "Tablero",
+      "Forecast"
+    ],
+    "entry": "Abrir demo.cmd",
+    "guide": "Cómo funciona.html",
+    "requirements": "Windows de 64 bits. El ZIP incluye Node.js.",
+    "scope": "Contiene 29 meses de ejemplo. El inventario y los reportes del equipo se simulan localmente."
   },
   {
     "slug": "gestion-flujo",
     "name": "Gestión de Flujo",
     "group": "Finanzas",
-    "purpose": "Relaciona compras, aprobaciones, presupuesto de obras y movimientos de caja para saber qué se comprometió y qué se pagó.",
+    "purpose": "Permite revisar cuánto dinero se espera cobrar y cuánto presupuesto queda antes de autorizar una orden de compra.",
     "steps": [
-      "Crea una orden de compra con proveedor, centro de costo, monto neto, cantidad de cotizaciones y criterio de selección.",
-      "Envíala a revisión y cambia el rol de demostración a Jefatura o Finanzas. Aprueba u observa la orden según el monto.",
-      "Registra un pago total o parcial y sigue su efecto en el saldo de la orden, el presupuesto comprometido y la caja del día."
+      "Ajusta el stock, las ventas, el pie o las cuotas de un proyecto y revisa la proyección mensual.",
+      "Consulta las cuentas por cobrar y envía una orden de compra con cargo al presupuesto.",
+      "Recorre las validaciones de la orden y compara el presupuesto antes y después de liberarla."
     ],
-    "result": "Una orden trazable desde la solicitud hasta la salida de dinero, con efecto visible en caja y presupuesto.",
-    "scope": "Recorrido reconstruido con el modelo original de totales diarios. Los umbrales, proveedores y montos son ficticios. Los roles se alternan localmente. La emisión bancaria, el correo y la sincronización quedan fuera de la demo."
+    "result": "Se ve cómo una venta afecta los cobros futuros y cómo una compra compromete el presupuesto.",
+    "tags": [
+      "Proyección",
+      "Cobranza",
+      "Órdenes de compra"
+    ],
+    "entry": "Gestion de Flujo - Demo.html",
+    "guide": "Guia.html",
+    "requirements": "Navegador de escritorio actual.",
+    "scope": "La aplicación completa está en un HTML y el escenario de prueba se guarda en el navegador."
   },
   {
-    "slug": "situacion-proyectos",
-    "name": "GTX · Situación de Proyectos",
+    "slug": "sala-y-camioneta",
+    "name": "Sala de reuniones y camioneta",
     "group": "Operaciones",
-    "purpose": "Reúne el estado de las obras por espacio de trabajo para que el equipo sepa qué partida está atrasada y cuál es el próximo paso.",
+    "purpose": "Coordina en una sola aplicación la reserva de salas y el uso de la camioneta compartida.",
     "steps": [
-      "Selecciona un espacio de trabajo y crea un proyecto. Agrega una partida de obra con responsable y vencimiento.",
-      "Abre Mis pendientes o Calendario. Actualiza el estado, reprograma la fecha y deja una observación en la conversación de la partida.",
-      "Adjunta un documento de prueba al proyecto y vuelve a Vista general para revisar el avance y los pendientes en foco."
+      "Entra a la agenda de salas, elige una franja e invita a participantes. Prueba un horario que ya esté ocupado.",
+      "Abre la agenda de la camioneta y completa una reserva. Revisa ambas agendas desde el inicio.",
+      "Cambia de colaborador a administrador y consulta las invitaciones y los avisos simulados."
     ],
-    "result": "Una vista del avance por proyecto con vencimientos, responsables, comentarios y documentos asociados.",
-    "scope": "Aplicación adicional a las trece del portal. Recorrido reconstruido a partir de las vistas de GTX. Las personas son ficticias y los archivos se guardan en el equipo. Los permisos corporativos y las notificaciones compartidas requieren el servicio original."
+    "result": "La disponibilidad de cada recurso queda visible y los cruces se detectan al reservar.",
+    "tags": [
+      "Salas",
+      "Camioneta",
+      "Reservas"
+    ],
+    "entry": "ABRIR DEMO.cmd",
+    "guide": "GUIA DE USO.html",
+    "requirements": "Windows con Node.js 20.11 o posterior instalado.",
+    "scope": "Una sola demo con dos agendas, pantalla de sala, perfiles y bandeja local de avisos."
+  },
+  {
+    "slug": "tareas-vicaper",
+    "name": "Tareas Vicaper",
+    "group": "Operaciones",
+    "purpose": "Conecta los pedidos que llegan por chat con tareas asignadas, fechas de compromiso y un registro de avances.",
+    "steps": [
+      "Desde el chat, convierte una solicitud en tarea o créala en el tablero y asígnala a un responsable.",
+      "Agrega subtareas, checklist o un archivo. Registra un avance en la bitácora y cambia el estado.",
+      "Consulta Mis tareas, el calendario y las métricas para revisar vencimientos y carga de trabajo."
+    ],
+    "result": "Cada compromiso conserva su responsable, sus antecedentes y su fecha de seguimiento.",
+    "tags": [
+      "Chat",
+      "Tareas",
+      "Calendario"
+    ],
+    "entry": "Abrir demo.cmd",
+    "guide": "guia.html",
+    "requirements": "Windows con Node.js instalado.",
+    "scope": "Los ejemplos y las conversaciones se gestionan en el navegador local. Incluye exportación e importación de respaldo."
+  },
+  {
+    "slug": "gestion-oficina",
+    "name": "Gestión de Oficina",
+    "group": "Operaciones",
+    "purpose": "Centraliza personas, equipos, líneas y licencias para saber qué recurso tiene asignado cada integrante.",
+    "steps": [
+      "Abre la ficha de un usuario y revisa los equipos, líneas y cuentas que tiene asociados.",
+      "Consulta un recurso y edita su asignación, disponibilidad o responsable.",
+      "Revisa las relaciones y el historial para identificar qué cambió y a quién afecta."
+    ],
+    "result": "Una misma consulta permite seguir un recurso hasta la persona y las cuentas asociadas.",
+    "tags": [
+      "Personas",
+      "Equipos",
+      "Licencias"
+    ],
+    "entry": "index.html",
+    "guide": "README.md",
+    "requirements": "Navegador de escritorio actual.",
+    "scope": "Incluye fichas de ejemplo, asignaciones y cuentas ficticias. Los cambios se guardan en este navegador."
   }
 ]
