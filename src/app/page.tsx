@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import CasosProfesionales from "./CasosProfesionales";
+import "./casos.css";
 
 type ActionVariant = "primary" | "secondary" | "ghost";
 
@@ -15,7 +17,7 @@ type ActionLink = {
 
 const navItems = [
   { label: "Sobre mí", href: "#sobre-mi" },
-  { label: "Skills", href: "#skills" },
+  { label: "Habilidades", href: "#skills" },
   { label: "Proyectos", href: "#proyectos" },
   { label: "Certificaciones", href: "#certificaciones" },
   { label: "Contacto", href: "#contacto" },
@@ -46,6 +48,7 @@ const actionLinks: ActionLink[] = [
 ];
 
 const skillTags = [
+  "Desarrollo de aplicaciones", "Automatización de procesos", "Make", "monday.com", "respond.io", "Firebase",
   "Java",
   "Python",
   "SQL",
@@ -152,6 +155,7 @@ const projects: ProjectInfo[] = [
 ] as const;
 
 const certifications: CertificationInfo[] = [
+  {name:"Make Academy · Automatización de procesos e inteligencia artificial",issuer:"Marzo de 2026 · Make Foundation, Make Basics, Make Intermediate, Make Advanced, AI Automation Explorer y AI Agent Builder.",downloadHref:"/Certificados-Make.pdf"},
   {
     name: "Scrum Foundation Professional Certification – CertiProf",
     issuer: "Certificación profesional en metodologías ágiles Scrum",
@@ -263,7 +267,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-4 py-10 sm:px-8 lg:px-10">
-        <header className="rounded-3xl border border-slate-200 bg-white/90 p-10 text-center shadow-2xl shadow-slate-200">
+        <header className="perfil-cabecera">
           <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-full border border-slate-200 bg-slate-50 shadow-lg shadow-slate-200">
             <Image
               src="/foto-perfil.webp"
@@ -279,12 +283,10 @@ export default function Home() {
             Alexis Rodríguez
           </h1>
           <h2 className="mt-2 text-2xl font-semibold text-slate-700">
-            Ingeniero en Informática | Junior TI
+            Analista TI en Grupo Tierras de Chile · Ingeniero en Informática
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-pretty text-base text-slate-600 sm:text-lg">
-            Este es mi portafolio personal. Aquí presento mis proyectos, habilidades
-            y certificaciones, enfocados en desarrollo de software, automatización
-            de procesos y soporte TI.
+            Creo aplicaciones para el negocio inmobiliario, desde la evaluación de un terreno hasta la firma y el seguimiento de una venta. También automatizo procesos y desarrollo herramientas para el trabajo diario de la oficina.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {actionLinks.map(({ label, href, variant, iconSrc, iconAlt }) => (
@@ -323,28 +325,10 @@ export default function Home() {
 
         <main className="space-y-8 pb-16">
           <Section id="sobre-mi" title="Sobre mí">
-            <div className="space-y-4">
-              <p>
-                Ingeniero en Informática titulado, con formación integral en
-                desarrollo de software, bases de datos, automatización de procesos y
-                soporte TI.
-              </p>
-              <p>
-                Cuento con experiencia práctica en automatización mediante
-                herramientas low-code/no-code como n8n, integración de sistemas y
-                optimización de procesos internos, adquirida durante mi práctica
-                profesional.
-              </p>
-              <p>
-                Me considero una persona responsable, proactiva y con alta capacidad
-                de aprendizaje, orientada al trabajo en equipo. Busco seguir
-                desarrollándome profesionalmente en el área TI y aportar con
-                soluciones tecnológicas eficientes y bien estructuradas.
-              </p>
-            </div>
+            <div className="space-y-4"><p>Soy ingeniero en informática y desde el 2 de marzo de 2026 trabajo como Analista TI en Grupo Tierras de Chile. Creé las aplicaciones que el equipo utiliza para evaluar predios, proyectar ventas, gestionar la cartera y coordinar las operaciones de oficina.</p><p>Mi trabajo combina el desarrollo de software con la automatización de procesos y el soporte TI. Uso Make, monday.com, respond.io y n8n. En cada ficha de este portafolio muestro el problema, el flujo de trabajo y el resultado que se puede probar.</p></div>
           </Section>
 
-          <Section id="skills" title="Skills">
+          <Section id="skills" title="Habilidades">
             <div className="flex flex-wrap gap-3">
               {skillTags.map((skill) => (
                 <span
@@ -357,7 +341,8 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section id="proyectos" title="Proyectos">
+          <Section id="proyectos" title="Aplicaciones que creé en Grupo Tierras de Chile"><CasosProfesionales /></Section>
+          <Section id="otros-proyectos" title="Otros proyectos">
             <div className="grid gap-6 md:grid-cols-2">
               {projects.map((project) => (
                 <article
@@ -482,8 +467,7 @@ export default function Home() {
         </main>
 
         <footer className="pb-6 text-center text-sm text-slate-500">
-          © 2026 Alexis Rodríguez — Portafolio personal. Desarrollado con
-          dedicación y ganas de aprender 🚀
+          © 2026 Alexis Rodríguez Riquelme · Analista TI y creador de aplicaciones.
         </footer>
       </div>
 
@@ -620,3 +604,4 @@ export default function Home() {
     </div>
   );
 }
+

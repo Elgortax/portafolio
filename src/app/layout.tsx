@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alexis Rodríguez | Portafolio",
+  title: "Alexis Rodríguez | Analista TI y creador de aplicaciones",
   description:
-    "Landing personal en Next.js para compartir el perfil profesional de Alexis Rodríguez.",
+    "Portafolio de Alexis Rodríguez Riquelme, Analista TI en Grupo Tierras de Chile. Aplicaciones inmobiliarias, automatización de procesos y demos locales.",
 };
 
 export default function RootLayout({
@@ -33,3 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
+
