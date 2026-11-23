@@ -6,7 +6,19 @@ import casos from "./casos.json";
 
 const grupos = ["Todos", "Inversión", "Comercial", "Finanzas", "Operaciones"];
 const base = "https://github.com/Elgortax/terreno-ops";
-const capturas = new Set(["situacion-proyectos", "evaluador-proyectos", "sala-y-camioneta"]);
+const descripciones: Record<string, string> = {
+  "gestion-cartera": "Cotización de prueba con la estructura de pago y los vencimientos del pie.",
+  "situacion-proyectos": "Vista general de GTX con los proyectos activos, pendientes y próximos hitos.",
+  "radar-terrenos": "Seguimiento de terrenos en Nexo Tierra con estados de evaluación y filtros de búsqueda.",
+  "evaluador-proyectos": "Resumen del evaluador con una tabla de predios, margen y utilidad proyectada.",
+  "evaluador-broker": "Evaluación de un loteo con precios por categoría y monto destinado a obras.",
+  "panel-seguimiento": "Detalle del embudo comercial desde los leads generados hasta las promesas firmadas.",
+  "cierre-comercial": "Tablero de Cierre Comercial con indicadores del período e históricos.",
+  "gestion-flujo": "Tablero de Gestión de Flujo con ingresos, presupuesto y proyección mensual.",
+  "sala-y-camioneta": "Pantalla de las dos salas con una reunión activa y una sala disponible.",
+  "tareas-vicaper": "Formulario Nueva tarea con descripción, proyecto, prioridad y responsable.",
+  "gestion-oficina": "Portada de Gestión de Oficina con computadores, teléfonos y recursos de trabajo."
+};
 
 export default function CasosProfesionales() {
   const [grupo, setGrupo] = useState("Todos");
@@ -18,12 +30,14 @@ export default function CasosProfesionales() {
     </div>
     <p className="casos-cuenta" aria-live="polite">{lista.length} {lista.length === 1 ? "proyecto" : "proyectos"}</p>
     <div className="casos-grid">{lista.map(c => <article key={c.slug} className="caso" data-grupo={c.group}>
+      <a className="caso-miniatura" href={`/miniaturas/${c.slug}.jpg`} target="_blank" rel="noreferrer" aria-label={`Ampliar imagen de ${c.name} en otra pestaña`}>
+        <Image src={`/miniaturas/${c.slug}.jpg`} alt={descripciones[c.slug]} fill sizes="(max-width: 650px) 95vw, (max-width: 1000px) 46vw, 350px" />
+      </a>
       <div className="caso-area"><span>{c.group}</span><span>2026</span></div>
       <h3>{c.name}</h3><p>{c.purpose}</p>
       <ol className="caso-flujo" aria-label="Funciones principales">{c.tags.map(t => <li key={t}>{t}</li>)}</ol>
       <details>
         <summary>Ver recorrido y requisitos</summary>
-        {capturas.has(c.slug) && <Image src={`/capturas-demo/${c.slug}.jpg`} width={960} height={545} sizes="(max-width: 650px) 95vw, 400px" style={{width:"100%",height:"auto",marginTop:12,borderRadius:6}} alt={`Pantalla de inicio de la demo de ${c.name}`} />}
         <ol className="caso-pasos">{c.steps.map(p => <li key={p}>{p}</li>)}</ol>
         <h4>Resultado</h4><p>{c.result}</p>
         <h4>Cómo abrirla</h4><p>Extrae el ZIP completo y abre <strong>{c.entry}</strong>. {c.requirements}</p>

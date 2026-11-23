@@ -1,2 +1,24 @@
 .perfil-cabecera{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 8% -30%,#407c6d,transparent 52%),#102f35;color:#f4faf6;padding:clamp(35px,7vw,74px) clamp(22px,5vw,60px);border-radius:28px;text-align:center;box-shadow:0 12px 45px #15332d20}.perfil-cabecera:after{content:"";position:absolute;inset:0;z-index:-1;background:repeating-radial-gradient(ellipse at 118% 120%,transparent 0 21px,#a4d0b81f 22px 23px,transparent 24px 38px)}.perfil-cabecera h1{color:#f5faf4;letter-spacing:-.055em}.perfil-cabecera h2{color:#beead9}.perfil-cabecera>p{color:#d4e4de}.perfil-cabecera a{background:#f5faf6;color:#12372f}.casos-intro{max-width:78ch;color:#435d62;line-height:1.7}.casos-filtros,.caso-enlaces{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.casos-filtros{margin:20px 0 5px}.casos-filtros button{border:1px solid #cfddd6;background:white;color:#264942;border-radius:22px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:14px}.casos-filtros button[aria-pressed=true]{background:#15453e;color:white;border-color:#15453e}.casos-cuenta{font-size:13px;color:#596a67;margin:10px 0}.casos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,275px),1fr));gap:16px;align-items:start}.caso{--tone:#126d62;--pale:#e4f3ed;background:white;border:1px solid #d6e1dc;border-radius:16px;padding:20px;box-shadow:0 5px 18px #153c3408;min-width:0}.caso[data-grupo=Inversión]{--tone:#625184;--pale:#f1eefa}.caso[data-grupo=Comercial]{--tone:#875724;--pale:#faf0e1}.caso[data-grupo=Operaciones]{--tone:#2b627a;--pale:#e5f1f5}.caso-area{display:flex;align-items:center;justify-content:space-between;color:var(--tone);font-size:12px;font-weight:650}.caso-area span:first-child{background:var(--pale);border-radius:14px;padding:3px 10px}.caso h3{font-size:23px;line-height:1.12;letter-spacing:-.04em;color:#172f32;font-weight:700;margin:15px 0 9px}.caso p,.caso-pasos{font-size:14px;line-height:1.58;color:#43575a}.caso-flujo{margin:16px 0;display:flex;gap:5px;flex-wrap:wrap}.caso-flujo li{font-size:12px;color:var(--tone);font-weight:550}.caso-flujo li+li:before{content:"›";margin-right:5px;opacity:.65}.caso details{border-top:1px solid #e1e7e3;padding:10px 0}.caso summary{color:var(--tone);cursor:pointer;font-size:14px;font-weight:650}.caso-pasos{list-style:decimal;padding-left:20px;margin:10px 0}.caso-pasos li{margin:.5em 0}.caso h4{font-weight:650;margin-top:10px;color:#213e41}.caso-enlaces{margin-top:9px}.caso-enlaces a{font-size:13px;font-weight:650;color:var(--tone)}.caso-enlaces a:first-child{background:var(--tone);color:white;padding:7px 11px;border-radius:7px}.caso-enlaces a+a{margin-left:auto}.casos :focus-visible{outline:3px solid #d78c26;outline-offset:3px}@media(prefers-reduced-motion:no-preference){.caso{transition:box-shadow .18s,border-color .18s}.caso:hover{box-shadow:0 7px 23px #153c3412;border-color:#b5c8bc}}
 .caso-vista{width:calc(100% + 40px);max-width:none;height:auto;margin:-20px -20px 15px;border-radius:15px 15px 0 0;display:block}
+.caso-miniatura {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  margin: -20px -20px 17px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(145deg, var(--pale), #eef3f2);
+  border-bottom: 1px solid #d6e1dc;
+  cursor: zoom-in;
+}
+.caso-miniatura img {
+  object-fit: contain;
+  padding: 8px;
+  filter: drop-shadow(0 2px 4px #14292522);
+}
+.caso-miniatura:focus-visible { outline-offset: -4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .caso-miniatura img { transition: transform .2s ease; }
+  .caso-miniatura:hover img { transform: scale(1.025); }
+}
