@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import casos from "./casos.json";
 
 const grupos = ["Todos", "Inversión", "Comercial", "Finanzas", "Operaciones"];
@@ -20,6 +20,28 @@ const descripciones: Record<string, string> = {
   "gestion-oficina": "Portada de Gestión de Oficina con computadores, teléfonos y recursos de trabajo."
 };
 
+function Recorrido({ caso }: { caso: (typeof casos)[number] }) {
+  const dialogo = useRef<HTMLDialogElement>(null);
+  const tituloId = `recorrido-${caso.slug}`;
+  return <>
+    <button className="caso-recorrido" type="button" aria-haspopup="dialog" onClick={() => dialogo.current?.showModal()}>
+      Ver recorrido y requisitos
+    </button>
+    <dialog ref={dialogo} className="caso-dialogo" aria-labelledby={tituloId}>
+      <div className="caso-dialogo-cabecera">
+        <h3 id={tituloId}>{caso.name}</h3>
+        <button type="button" onClick={() => dialogo.current?.close()}>Cerrar</button>
+      </div>
+      <h4>Recorrido</h4>
+      <ol className="caso-pasos">{caso.steps.map(paso => <li key={paso}>{paso}</li>)}</ol>
+      <h4>Resultado</h4><p>{caso.result}</p>
+      <h4>Cómo abrirla</h4>
+      <p>Extrae el ZIP completo y abre <strong>{caso.entry}</strong>. {caso.requirements}</p>
+      <p>{caso.scope} La guía incluida es <strong>{caso.guide}</strong>.</p>
+    </dialog>
+  </>;
+}
+
 export default function CasosProfesionales() {
   const [grupo, setGrupo] = useState("Todos");
   const lista = casos.filter(c => grupo === "Todos" || c.group === grupo);
@@ -36,13 +58,7 @@ export default function CasosProfesionales() {
       <div className="caso-area"><span>{c.group}</span><span>2026</span></div>
       <h3>{c.name}</h3><p>{c.purpose}</p>
       <ol className="caso-flujo" aria-label="Funciones principales">{c.tags.map(t => <li key={t}>{t}</li>)}</ol>
-      <details>
-        <summary>Ver recorrido y requisitos</summary>
-        <ol className="caso-pasos">{c.steps.map(p => <li key={p}>{p}</li>)}</ol>
-        <h4>Resultado</h4><p>{c.result}</p>
-        <h4>Cómo abrirla</h4><p>Extrae el ZIP completo y abre <strong>{c.entry}</strong>. {c.requirements}</p>
-        <p>{c.scope} La guía incluida es <strong>{c.guide}</strong>.</p>
-      </details>
+      <Recorrido caso={c} />
       <div className="caso-enlaces">
         <a href={`${base}/releases/download/v3.0.0/${c.slug}.zip`} aria-label={`Descargar demo de ${c.name}`}>Descargar demo ↓</a>
         <a href={`${base}/tree/main/proyectos/${c.slug}`} target="_blank" rel="noreferrer" aria-label={`Ver ${c.name} en GitHub`}>GitHub ↗</a>
